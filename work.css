@@ -1,0 +1,198 @@
+/* work.css - Estilo profissional mantendo sua identidade visual */
+
+/* Estrutura Principal */
+.work-main {
+    padding: 40px 5% 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Títulos das Seções */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #333;
+    margin: 80px 0 50px;
+    text-align: center;
+    position: relative;
+    font-family: 'Epilogue', sans-serif;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 120px;
+    height: 3px;
+    background: rgb(181, 140, 89);
+    margin: 20px auto 0;
+    border-radius: 3px;
+}
+
+/* Cards de Projetos */
+.projects-section {
+    margin-bottom: 100px;
+}
+
+.projects-section.volunteer {
+    background: rgba(245, 247, 250, 0.5); /* Tom mais suave que combina com seu hero */
+    padding: 60px 5%;
+    border-radius: 12px;
+    border: 1px solid rgba(195, 207, 226, 0.3); /* Borda sutil combinando com o gradiente do hero */
+}
+
+.project-card {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin: 60px 0;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 30px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+}
+
+.project-card.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Imagens dos Projetos */
+.project-image {
+    flex: 1;
+    min-width: 450px;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.03);
+}
+
+/* Conteúdo dos Cards */
+.project-content {
+    flex: 1;
+    padding: 50px;
+}
+
+.project-content h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 25px;
+    font-weight: 500;
+    font-family: 'Epilogue', sans-serif;
+}
+
+.project-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 35px;
+    font-weight: 400;
+}
+
+/* Botões */
+.project-button {
+    display: inline-block;
+    padding: 14px 35px;
+    background: rgb(181, 140, 89);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 2px solid rgb(181, 140, 89);
+    font-family: 'Epilogue', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+.project-button:hover {
+    background: transparent;
+    color: rgb(181, 140, 89);
+    transform: translateY(-2px);
+}
+
+/* Responsividade */
+@media (max-width: 1100px) {
+    .project-card {
+        flex-direction: column;
+        gap: 0;
+        margin: 50px 0;
+    }
+    
+    .project-card.reverse {
+        flex-direction: column;
+    }
+    
+    .project-image {
+        min-width: 100%;
+        max-height: 400px;
+    }
+    
+    .project-content {
+        padding: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2.2rem;
+        margin: 60px 0 40px;
+    }
+    
+    .section-title::after {
+        width: 80px;
+        margin: 15px auto 0;
+    }
+    
+    .project-content {
+        padding: 30px;
+    }
+    
+    .project-content h2 {
+        font-size: 1.6rem;
+    }
+    
+    .project-content p {
+        font-size: 1rem;
+    }
+    
+    .project-button {
+        padding: 12px 28px;
+    }
+    
+    .projects-section.volunteer {
+        padding: 40px 5%;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .project-content {
+        padding: 25px;
+    }
+    
+    .project-content h2 {
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+    }
+    
+    .project-content p {
+        margin-bottom: 25px;
+    }
+}

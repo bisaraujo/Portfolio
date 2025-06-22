@@ -1,0 +1,313 @@
+/* RESET E CONFIGURAÇÕES GERAIS */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Epilogue', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    padding-top: 70px; /* Compensa o header fixo */
+}
+
+/* HEADER */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 0;
+    background-color: white;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    font-weight: 400;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    padding: 0;
+    margin: 0 30px 0 0;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: rgb(181, 140, 89);
+}
+
+/* HERO SECTION */
+.hero-section {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    min-height: calc(100vh - 70px);
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    z-index: -1;
+}
+
+.hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 600px;
+    padding-right: 40px;
+}
+
+.intro-container {
+    margin-bottom: 40px;
+}
+
+.intro-container h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 10px 0;
+    line-height: 1.2;
+}
+
+.intro-container h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin: 5px 0;
+}
+
+.description-contact {
+    font-weight: 400;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+.description-contact h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    font-weight: 400;
+}
+
+.img-gabi {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.img-gabi img {
+    max-width: 100%;
+    width: 500px;
+    height: auto;
+}
+
+/* DIVIDER LINE */
+.divider-line {
+    height: 1px;
+    background-color: #ddd;
+    margin: 40px 5%;
+}
+
+/* LOGOS SECTION */
+.logos-section {
+    padding: 40px 5%;
+}
+
+.logos-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logos-container img {
+    max-height: 150px;
+    width: 100px;
+    height: 100px;
+    transition: all 0.3s ease;
+}
+
+.logos-container img:hover {
+    
+    transform: scale(1.1);
+}
+
+/* ABOUT SECTION - Versão refinada */
+.about-section {
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Alterado para center para alinhamento vertical */
+    gap: 60px; /* Aumentei o gap para melhor respiração */
+    margin: 50px 0; /* Mais espaço entre seções */
+    max-width: 1100px; /* Largura um pouco maior */
+    width: 100%;
+}
+
+.about-container.reverse {
+    flex-direction: row-reverse;
+}
+
+.about-image {
+    flex: 1;
+    min-width: 350px; /* Largura mínima maior */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centraliza a imagem verticalmente */
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 450px; /* Imagem um pouco maior */
+    height: auto;
+    border-radius: 12px; /* Bordas mais arredondadas */
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Sombra sutil */
+}
+
+.about-text {
+    flex: 1;
+    max-width: 500px;
+    padding: 20px;
+    background: #f9f9f9; /* Fundo sutil para o texto */
+    border-radius: 8px;
+}
+
+.about-text p {
+    margin: 0 0 25px 0;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #444; /* Cor mais suave */
+    text-align: justify; /* Texto justificado */
+}
+
+/* Responsividade refinada */
+@media (max-width: 900px) {
+    .about-container,
+    .about-container.reverse {
+        flex-direction: column;
+        gap: 30px;
+        margin: 40px 0;
+    }
+    
+    .about-image {
+        min-width: 100%;
+    }
+    
+    .about-image img {
+        max-width: 100%;
+    }
+    
+    .about-text {
+        max-width: 100%;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-text p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+}
+
+/* FOOTER */
+footer {
+    background-color: rgb(181, 140, 89);
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+footer p {
+    color: rgb(230, 231, 231);
+    max-width: 600px;
+    margin: 0 auto 20px;
+    text-align: center;
+}
+
+footer figure {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+footer img {
+    width: 24px;
+    height: 24px;
+    transition: 0.3s;
+}
+
+footer img:hover {
+    opacity: 0.8;
+    transform: translateY(-3px);
+}
+
+
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        padding-top: 40px;
+        min-height: auto;
+    }
+    
+    .hero-content {
+        order: 1;
+        max-width: 100%;
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+    
+    .img-gabi {
+        order: 2;
+        margin-top: 40px;
+    }
+    
+    .img-gabi img {
+        width: 300px;
+    }
+    
+    .intro-container h1 {
+        font-size: 2.2rem;
+    }
+    
+    .intro-container h2 {
+        font-size: 1.4rem;
+    }
+    
+    .description-contact h3 {
+        font-size: 1rem;
+    }
+    
+    .logos-container {
+        gap: 20px;
+    }
+    
+    .logos-container img {
+        max-height: 60px;
+    }
+}
