@@ -121,30 +121,48 @@ header {
     margin: 40px 5%;
 }
 
-/* LOGOS SECTION */
+/* LOGOS SECTION - IMAGENS MUITO MAIORES */
 .logos-section {
-    padding: 40px 5%;
-}
-
-.logos-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
+    gap: 70px;
+    padding: 80px 5%;
+    background: linear-gradient(45deg, #f8f9fa 0%, #e9ecef 100%);
+    margin: 40px 0;
 }
 
-.logos-container img {
-    max-height: 150px;
-    width: 100px;
-    height: 100px;
-    transition: all 0.3s ease;
+.logos-section a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    background: white;
+    border-radius: 50%; /* Círculo perfeito */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 160px;
+    height: 160px;
 }
 
-.logos-container img:hover {
-    
+.logos-section a:hover {
+    transform: translateY(-10px) scale(1.08);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.logos-section img {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    transition: all 0.4s ease;
+    filter: grayscale(10%);
+    border-radius: 50%; /* Se a imagem também for circular */
+}
+
+.logos-section a:hover img {
+    filter: grayscale(0%) brightness(1.1);
     transform: scale(1.1);
 }
 
@@ -267,7 +285,6 @@ footer img:hover {
     transform: translateY(-3px);
 }
 
-
 @media (max-width: 768px) {
     .hero-section {
         flex-direction: column;
@@ -303,11 +320,20 @@ footer img:hover {
         font-size: 1rem;
     }
     
-    .logos-container {
-        gap: 20px;
+    .logos-section {
+        gap: 40px;
+        padding: 50px 5%;
+        margin: 20px 0;
     }
     
-    .logos-container img {
-        max-height: 60px;
+    .logos-section a {
+        width: 120px;
+        height: 120px;
+        padding: 10px;
+    }
+    
+    .logos-section img {
+        width: 140px;
+        height: 140px;
     }
 }

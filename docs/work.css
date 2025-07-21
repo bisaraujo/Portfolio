@@ -61,20 +61,29 @@
     flex-direction: row-reverse;
 }
 
-/* Imagens dos Projetos */
+/* Imagens dos Projetos - MELHORIAS APLICADAS */
 .project-image {
     flex: 1;
     min-width: 450px;
-    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px; /* Espaçamento interno para afastar das bordas */
+    background: #f8f9fa; /* Cor de fundo suave caso a imagem não preencha completamente */
 }
 
 .project-image img {
-    width: 100%;
-    height: 100%;
-    min-height: 300px;
-    object-fit: cover;
+    width: 85%; /* Reduz a largura para criar espaço nas laterais */
+    height: auto;
+    max-width: 400px; /* Limita o tamanho máximo */
+    min-height: 250px;
+    max-height: 320px;
+    object-fit: contain; /* Mantém proporções sem cortar */
+    object-position: center; /* Centraliza a imagem */
     display: block;
     transition: transform 0.5s ease;
+    border-radius: 8px; /* Bordas arredondadas sutis na imagem */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Sombra sutil para destacar */
 }
 
 .project-card:hover .project-image img {
@@ -139,6 +148,14 @@
     .project-image {
         min-width: 100%;
         max-height: 400px;
+        padding: 25px; /* Mantém o padding em telas menores */
+    }
+    
+    .project-image img {
+        min-height: 200px; /* Altura mínima reduzida para mobile */
+        max-height: 280px;
+        width: 90%; /* Aumenta um pouco a largura em mobile */
+        max-width: 350px;
     }
     
     .project-content {
@@ -155,6 +172,22 @@
     .section-title::after {
         width: 80px;
         margin: 15px auto 0;
+    }
+    
+    .project-image {
+        min-width: 100%;
+    }
+    
+    .project-image {
+        min-width: 100%;
+        padding: 20px; /* Reduz o padding em tablets */
+    }
+    
+    .project-image img {
+        min-height: 180px;
+        max-height: 250px;
+        width: 90%;
+        max-width: 320px;
     }
     
     .project-content {
@@ -181,6 +214,17 @@
 @media (max-width: 480px) {
     .section-title {
         font-size: 1.8rem;
+    }
+    
+    .project-image {
+        padding: 15px; /* Padding menor para mobile */
+    }
+    
+    .project-image img {
+        min-height: 160px;
+        max-height: 220px;
+        width: 95%;
+        max-width: 280px;
     }
     
     .project-content {
